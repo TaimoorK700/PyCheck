@@ -212,3 +212,7 @@ The tests cover warning cases, safe cases, exact numerical boundaries, multiple 
 - The repeated-mutable-object rule reports only expressions that are obviously mutable from their syntax.
 
 These constraints keep the tool predictable and prevent it from executing untrusted source files.
+
+## Attribution
+
+PyCheck was inspired by [PythonTA](https://github.com/pyta-uoft/pyta), a static-analysis tool developed at the University of Toronto under Professor David Liu to help students identify and fix common Python errors. PyCheck is an independent implementation: it is not affiliated with or endorsed by PythonTA or the University of Toronto, and it does not include or modify PythonTA source code.
