@@ -131,7 +131,7 @@ The rule recognizes obviously mutable expressions, including:
 
 - List, dictionary, and set literals
 - List, dictionary, and set comprehensions
-- Direct calls to `list()`, `dict()`, `set()`, and `bytearray()`
+- Direct calls to `list()`, `dict()`, and `set()`
 - List-producing multiplication
 - Tuples containing a recognized mutable object
 
@@ -216,3 +216,4 @@ These constraints keep the tool predictable and prevent it from executing untrus
 ## Attribution
 
 PyCheck was inspired by [PythonTA](https://github.com/pyta-uoft/pyta), a static-analysis tool developed at the University of Toronto under Professor David Liu to help students identify and fix common Python errors. PyCheck is an independent implementation: it is not affiliated with or endorsed by PythonTA or the University of Toronto, and it does not include or modify PythonTA source code.
+
