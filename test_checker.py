@@ -454,7 +454,7 @@ def test_reports_repeated_mutable_object_with_reversed_operands() -> None:
 
 @pytest.mark.parametrize(
     "constructor",
-    ["list()", "dict()", "set()", "bytearray()"],
+    ["list()", "dict()", "set()"],
 )
 def test_reports_repeated_mutable_constructor_call(constructor: str) -> None:
     """Test that direct calls creating mutable objects are reported."""

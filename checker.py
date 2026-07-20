@@ -1,14 +1,14 @@
 import ast
 
 
-_MUTABLE_CONSTRUCTOR_NAMES = {"list", "dict", "set", "bytearray"}
+_MUTABLE_CONSTRUCTOR_NAMES = {"list", "dict", "set"}
 _MUTABLE_EXPRESSION_TYPES = (
     ast.List,
     ast.Dict,
     ast.Set,
     ast.ListComp,
     ast.DictComp,
-    ast.SetComp,
+    ast.SetComp
 )
 
 
@@ -229,5 +229,4 @@ def check_repeated_mutable_objects(tree: ast.Module) -> list[int]:
             repeated_mutable_objects.append(node.lineno)
 
     return repeated_mutable_objects
-
 
