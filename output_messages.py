@@ -58,7 +58,7 @@ def output_excessive_nesting_error(
     errors: list[tuple[int, str, int]],
     max_nesting: int = constants.MAX_NEST_COUNT,
 ) -> None:
-    """Print message for excessing nesting."""
+    """Print message for excessive nesting."""
     for line_number, function_name, nest_degree in errors:
             print(
             f"{path}: Line {line_number}: "
