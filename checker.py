@@ -110,7 +110,7 @@ def check_function_length(tree: ast.Module, max_length: int) -> list[tuple[int, 
     return long_functions
 
 def check_num_parameters(tree: ast.Module, max_param_num: int) -> list[tuple[int, str, int]]:
-    """Return the line number, name and number of parameters of every function that has more paramters than max_param_num."""
+    """Return the line number, name and number of parameters of every function that has more parameters than max_param_num."""
     more_params = []
 
     for node in ast.walk(tree):
