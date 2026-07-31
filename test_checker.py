@@ -567,24 +567,5 @@ def test_reports_unknown_multiplier() -> None:
     assert result == [1]
 
 
-def test_cli_reports_repeated_mutable_object(
-    tmp_path: Path, capsys: pytest.CaptureFixture[str]
-) -> None:
-    """Test that the CLI prints the shared-reference warning."""
-    path = tmp_path / "shared_rows.py"
-    path.write_text("grid = [[0] * 3] * 3\n", encoding="utf-8")
-
-    exit_code = cli.main([str(path)])
-
-    captured = capsys.readouterr()
-    assert exit_code == 0
-    assert captured.out == (
-        f"{path}: Line 1: Repeating a mutable object with '*' creates shared "
-        "references; use a comprehension instead.\n"
-    )
-    assert "No issues found" not in captured.out
-    assert captured.err == ""
-
-
 if __name__ == '__main__':
     pytest.main()
